@@ -71,6 +71,17 @@ public abstract class Book {
     {
         return year > endDate();
     }
-    public abstract boolean ValidateBook(int Quantity, int year);
+    public abstract void ValidateBook(int Quantity, int year);
+    public double BuyBook(int Quantity, String Email, String Address)
+    {
+        throw new Error("Select Book from available types");
+    }
+
+    protected double getTotalPrice(int Quantity)
+    {
+        return Quantity * this.price;
+    }
+
+
 
 }
