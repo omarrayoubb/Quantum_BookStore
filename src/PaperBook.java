@@ -14,11 +14,22 @@ public class PaperBook extends Book{
     }
 
 
-    public boolean ValidateBook(int Quantity, int year) {
+    public void ValidateBook(int Quantity, int year) {
         if (Quantity > this.stock || !checkOutdated(year)) {
             throw new Error("Not Enough Stock");
         }
-        return true;
     }
+    public void reduceStock(int Quantity)
+    {
+        stock -= Quantity;
+    }
+    public double BuyBook(int Quantity, String email, String Address)
+    {
+        reduceStock(Quantity);
+        double total_price = getTotalPrice(Quantity);
+        System.out.println("Sending By Shipping Service at " + Address);
+        return total_price;
+    }
+
 
 }
