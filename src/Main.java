@@ -4,8 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Test addTest = new Test();
         addTest.addTest();
+        System.out.println("--------------------------------------------------------------------");
 
+        Test RemoveTest = new Test();
+        RemoveTest.TestRemove();
 
-        System.out.println("------------------------------------------------");
     }
 }

@@ -23,13 +23,15 @@ public class Inventory {
     }
     public void removeBooks()
     {
+        List<Book> old_books = new ArrayList<Book>();
         for (Book b: Books)
         {
             if (!b.checkOutdated(Year.now().getValue()))
             {
-                Books.remove(b);
+                old_books.add(b);
             }
         }
+        Books.removeAll(old_books);
     }
 
     public double BuyBook(String ISBN, int Quantity, String email, String Address)
