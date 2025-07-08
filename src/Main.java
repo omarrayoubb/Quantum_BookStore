@@ -8,6 +8,8 @@ public class Main {
 
         Test RemoveTest = new Test();
         RemoveTest.TestRemove();
-
+        System.out.println("--------------------------------------------------------------------");
+        Test BuyingBook = new Test();
+        BuyingBook.BuyingTest();
     }
 }

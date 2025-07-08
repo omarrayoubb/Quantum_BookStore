@@ -51,6 +51,21 @@ public class Test {
 
     }
 
+    public void BuyingTest()
+    {
+
+        PaperBook book = new PaperBook("111-222", "Blue Elephant", "Ahmed hossam",2023, 10, 10, 50);
+
+        inventory.addBook(book);
+
+        try {
+            double totalPrice = inventory.BuyBook("111-222", 2, "om@gmail.com", "afdasf");
+            System.out.println("BuyBook passed."+ inventory.GetBook("111-222").getName() + " total price: " + totalPrice);
+        } catch (Exception e) {
+            System.out.println("BuyBook failed: " + e.getMessage());
+        }
+    }
+
 
     public void printInventory()
     {

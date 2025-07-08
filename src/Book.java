@@ -69,7 +69,7 @@ public abstract class Book {
 
     public boolean checkOutdated(int year)
     {
-        return year > endDate();
+        return year <= endDate();
     }
     public abstract void ValidateBook(int Quantity, int year);
     public double BuyBook(int Quantity, String Email, String Address)
