@@ -11,13 +11,15 @@ public class Inventory {
     {
         for (Book b: Books)
         {
-            if (book.getISPN() == book.getISPN())
+            if (book.getISPN().equalsIgnoreCase(b.getISPN()))
             {
-                b = book;
+                int index = Books.indexOf(b);
+                Books.set(index, book);
                 return;
             }
         }
         Books.add(book);
+       // System.out.println("A new book has been added successfully");
     }
     public void removeBooks()
     {
